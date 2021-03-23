@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Camera playerCamera;
     public GameObject BulletPrefab;
 
 
@@ -19,7 +20,8 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject Bulletobject = Instantiate(BulletPrefab);
-            Bulletobject.transform.position = transform.position + transform.forward;
+            Bulletobject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
+            Bulletobject.transform.forward = playerCamera.transform.forward;
         }
             
     }

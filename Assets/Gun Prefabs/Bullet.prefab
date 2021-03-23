@@ -103,7 +103,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8487977681620441277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba950c58d2ee064cbc8a9a19b4ae0e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f30d48aec50e32646b5a5f4b4855b63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletprefab: {fileID: 8487977681620441277}
+  speed: 8
+  lifeduration: 2

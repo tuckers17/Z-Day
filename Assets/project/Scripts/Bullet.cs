@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         // check if the bullet should be destroyed.
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0f) {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
          }
     }
 }

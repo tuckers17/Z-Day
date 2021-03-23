@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Camera playerCamera;
-    public GameObject BulletPrefab;
+    
 
 
     // Start is called before the first frame update
@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject Bulletobject = Instantiate(BulletPrefab);
+            Objectpoolingmanager.Instance.GetBullet();
+
+            GameObject Bulletobject = Objectpoolingmanager.Instance.GetBullet();
             Bulletobject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
             Bulletobject.transform.forward = playerCamera.transform.forward;
         }
